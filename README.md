@@ -20,8 +20,10 @@ Modified:
         SEARCH_URL_0 = "https://encrypted.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&btnG=Google+Search"
         NEXT_PAGE_0 = "https://encrypted.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&start=%(start)d"
         SEARCH_URL_1 = "https://encrypted.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&num=%(num)d&btnG=Google+Search"
-        NEXT_PAGE_1 = "https://encrypted.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&num=%(num)d&start=%(start)d"```
+        NEXT_PAGE_1 = "https://encrypted.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&num=%(num)d&start=%(start)d"
+```
 ---   
+  
 #shuffelz.py - an automated browsing simulator.
 I wrote it for specificity for TOR.  Please read the ISSUES to understand why it should not be used outside the TOR network.
 ###What does it do?
