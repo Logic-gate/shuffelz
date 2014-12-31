@@ -30,17 +30,17 @@ __email__  = ["mad_dev@linuxmail.org", "mail@sysbase.org"]
 
 import random
 import urllib2
-from xgoogle.search import GoogleSearch, SearchError
+from search import GoogleSearch, SearchError
 import time
 from multiprocessing import Process
 from threading import Timer
 
 class shufflez:
 
-	def __init__(self, word_list, websites, user_agent):
-		self.word_list = word_list
-		self.websites = websites
-		self.user_agent = user_agent
+	def __init__(self):
+		self.word_list = 'lists/wordlist.txt'
+		self.websites = 'lists/websites.txt'
+		self.user_agent = 'lists/user_agent.txt'
 
 	def together(self, *functions):
 		process = []
@@ -112,12 +112,8 @@ class shufflez:
 			print "Search failed: %s" % e
 
 
-word_list = ''
-websites = ''
-user_agent = ''
 
-
-mask = shufflez(word_list, websites, user_agent)
+mask = shufflez()
 
 def random_websites():
 	count = random.randint(1,15)
@@ -144,10 +140,10 @@ def random_google():
 			mask.google(i)
 			
 
-while True:
-	try:
-		mask.together(random_google(), random_websites())
+#while True:
+#	try:
+#		mask.together(random_google(), random_websites())
 
-	except KeyboardInterrupt:
-		print 'Exit'
-		break
+#	except KeyboardInterrupt:
+#		print 'Exit'
+#		break
